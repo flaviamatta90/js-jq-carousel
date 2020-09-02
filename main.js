@@ -25,13 +25,16 @@ $(".next").click(
   }
 );
 
+// Se schiacciamo su" fa-angle-right il pallino va avanti
 $(".next").click(
   function(){
+
     var pallinoActive = $("i.active");
     pallinoActive.removeClass("active");
 
     if(pallinoActive.hasClass("last") == true){
       var nextPallino = $("i.first")
+
     }else{
       var nextPallino = pallinoActive.next();
     }
@@ -62,6 +65,8 @@ $(".prev").click(
   }
 );
 
+// Se schiacciamo su" fa-angle-left il pallino va avanti ma in senso opposto
+
 $(".prev").click(
   function(){
     var pallinoActive = $("i.active");
@@ -69,6 +74,7 @@ $(".prev").click(
 
     if(pallinoActive.hasClass("first") == true){
       var nextPallino = $("i.last")
+      
     }else{
       var nextPallino = pallinoActive.prev();
     }
@@ -76,8 +82,6 @@ $(".prev").click(
     nextPallino.addClass("active");
   }
 );
-
-
 
   }
 );

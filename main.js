@@ -25,6 +25,21 @@ $(".next").click(
   }
 );
 
+$(".next").click(
+  function(){
+    var pallinoActive = $("i.active");
+    pallinoActive.removeClass("active");
+
+    if(pallinoActive.hasClass("last") == true){
+      var nextPallino = $("i.first")
+    }else{
+      var nextPallino = pallinoActive.next();
+    }
+
+    nextPallino.addClass("active");
+  }
+);
+
 // Se schiacciamo su" fa-angle-left l'immagine va avanti ma in senso opposto
 
 $(".prev").click(
@@ -46,6 +61,7 @@ $(".prev").click(
     nextImg.addClass("active");
   }
 );
+
 
   }
 );

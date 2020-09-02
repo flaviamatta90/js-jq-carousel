@@ -25,5 +25,27 @@ $(".next").click(
   }
 );
 
+// Se schiacciamo su" fa-angle-left l'immagine va avanti ma in senso opposto
+
+$(".prev").click(
+  function(){
+    var imgActive = $("img.active");
+    imgActive.removeClass("active");
+
+    // togliamo la classe all' "img-last"
+    if(imgActive.hasClass("first")== true){
+      var nextImg = $("img.last")
+
+    // ri-attiviamo la classe di first-img
+    } else{
+      var nextImg = imgActive.prev();
+
+    }
+
+    // attiviamo la sequenza di immagini
+    nextImg.addClass("active");
+  }
+);
+
   }
 );

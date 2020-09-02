@@ -62,6 +62,22 @@ $(".prev").click(
   }
 );
 
+$(".prev").click(
+  function(){
+    var pallinoActive = $("i.active");
+    pallinoActive.removeClass("active");
+
+    if(pallinoActive.hasClass("first") == true){
+      var nextPallino = $("i.last")
+    }else{
+      var nextPallino = pallinoActive.prev();
+    }
+
+    nextPallino.addClass("active");
+  }
+);
+
+
 
   }
 );
